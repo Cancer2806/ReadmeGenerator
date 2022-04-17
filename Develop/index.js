@@ -4,7 +4,7 @@ const fs = require('fs');
 const generateMarkdown = require('./utils/generateMarkdown.js');
 const { dirname } = require('path');
 
-// TODO: Create an array of questions for user input
+// Array of questions for user input
 const questions = [
   {
     name: "title",
@@ -22,6 +22,11 @@ const questions = [
     message: "Enter any Installation Notes here",
   },
   {
+    name: "usage",
+    type: "input",
+    message: "Enter any notes on Usage of the Project",
+  },
+  {
     name: "credits",
     type: "input",
     message: "If you would like to include Credits, such as Collaborators, Third party assets and the like?",
@@ -32,44 +37,64 @@ const questions = [
     message: "Enter details of any particular features you'd like to include here",
   },
   {
+    name: "contributing",
+    type: "input",
+    message: "Enter any guidelines for contributing to the Project",
+  },
+  {
+    name: "tests",
+    type: "input",
+    message: "Enter any instructions for testing",
+  },
+  {
+    name: "github",
+    type: "input",
+    message: "What is your Github address",
+  },
+  {
+    name: "email",
+    type: "input",
+    message: "What is your email address",
+  },
+  {
     name: "license",
     type: "list",
     message: "Select the license that applies to the Project",
     choices: [
       "No License",
-      "MIT",
-      "GPL 3.0",
+      "Apache 2.0",
+      "Boost 1.0",
       "BSD 2 Clause",
       "BSD 3 Clause",
       "BSD 4 Clause",
-
-
+      "CCO",
+      "CCO 1.0",
+      "CC BY 4.0",
+      "EPL 1.0",
+      "GNU v3",
+      "GNU v2",
+      "MIT",
     ],
   }
 ];
 
 // Function to write README file
 function writeToFile(fileName, data) {
-  console.log(`${fileName} and ${data.title}`);
   const fileContent = generateMarkdown.generateMarkdown(data);
-  // fs.writeFileSync(__dirname + fileName, fileContent, 'utf8');
   if (fs.existsSync(`../${fileName}`)) {
     fs.unlinkSync(`../${fileName}`)
-    }
-  
+  }
   fs.writeFileSync(`../${fileName}`, fileContent, 'utf8');
-  // return;
 }
 
 // Function to initialize app
 function init() {
   inquirer.prompt(questions)
     .then(function (responses) {
-      console.log(responses);
       writeToFile('readme.md', responses);
     })
     .catch((error) => {
-      console.log(error.isTtyError);
+      console.log(error);
     })
 }
 

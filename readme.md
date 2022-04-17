@@ -1,11 +1,11 @@
-# No license version
+# With Licenses
 
-![License](No License)
+![License](https://img.shields.io/badge/License-Creative%20Commons%204.0-blue)
 
 
 ## Description
 
-if you can believe that
+
 
 
 ## Table of Contents
@@ -13,11 +13,19 @@ if you can believe that
 - [Installation](#installation-notes)
 - [Usage](#usage)
 - [Credits](#credits)
+- [Features](#Features)
+- [Contributing](#Contributing)
+- [Tests](#Tests)
+- [Questions](#Questions)
 - [License](#license)
 
+{Delete those that don't apply - don't forget to remove this part either :)}
 
 ## Installation Notes
 
+
+
+## Usage
 
 
 
@@ -31,17 +39,20 @@ if you can believe that
 
 
 
-## How to Contribute
+## Contributing
 
-If you created an application or package and would like other developers to contribute to it, you can include guidelines for how to do so. The [Contributor Covenant](https://www.contributor-covenant.org/) is an industry standard, but you can always write your own if you'd prefer.
+If you would like to contribute, please follow these guidelines: 
 
 
 ## Tests
 
-Go the extra mile and write tests for your application. Then provide examples on how to run them here.
 
+
+## Questions
+Github:  
+Email:  
 
 ## License
 
-This project is licensed under No License
-  No License.
+This project is licensed under Been Here
+  And Done That.
