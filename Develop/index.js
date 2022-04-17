@@ -2,6 +2,7 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 const generateMarkdown = require('./utils/generateMarkdown.js');
+const { dirname } = require('path');
 
 // TODO: Create an array of questions for user input
 const questions = [
@@ -23,7 +24,7 @@ const questions = [
   {
     name: "credits",
     type: "input",
-    message: "Would you like to include Credits - Collaborators, Third party assets and the like?",
+    message: "If you would like to include Credits, such as Collaborators, Third party assets and the like?",
   },
   {
     name: "features",
@@ -37,19 +38,27 @@ const questions = [
     choices: [
       "No License",
       "MIT",
+      "GPL 3.0",
+      "BSD 2 Clause",
+      "BSD 3 Clause",
+      "BSD 4 Clause",
 
 
-
-    ]
+    ],
   }
 ];
 
 // Function to write README file
 function writeToFile(fileName, data) {
-  console.log(`${fileName} and ${data.title}`)
+  console.log(`${fileName} and ${data.title}`);
   const fileContent = generateMarkdown.generateMarkdown(data);
-  fs.writeFileSync(__dirname + fileName, fileContent, 'utf8');
-  return;
+  // fs.writeFileSync(__dirname + fileName, fileContent, 'utf8');
+  if (fs.existsSync(`../${fileName}`)) {
+    fs.unlinkSync(`../${fileName}`)
+    }
+  
+  fs.writeFileSync(`../${fileName}`, fileContent, 'utf8');
+  // return;
 }
 
 // Function to initialize app
@@ -57,14 +66,10 @@ function init() {
   inquirer.prompt(questions)
     .then(function (responses) {
       console.log(responses);
-      writeToFile('readme.md',responses)
+      writeToFile('readme.md', responses);
     })
     .catch((error) => {
-      if (error.isTtyError) {
-        // Prompt couldn't be rendered in the current environment
-      } else {
-        // Something else went wrong
-      }
+      console.log(error.isTtyError);
     })
 }
 
