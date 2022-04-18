@@ -29,12 +29,12 @@ const questions = [
   {
     name: "credits",
     type: "input",
-    message: "If you would like to include Credits, such as Collaborators, Third party assets and the like?",
+    message: "Enter any Credits you'd like to acknowledge, such as Collaborators, Third party assets, etc.",
   },
   {
     name: "features",
     type: "input",
-    message: "Enter details of any particular features you'd like to include here",
+    message: "Enter details of any particular features you'd like to mention",
   },
   {
     name: "contributing",
@@ -55,6 +55,11 @@ const questions = [
     name: "email",
     type: "input",
     message: "What is your email address",
+  },
+  {
+    name: "questions",
+    type: "input",
+    message: "Enter any instructions for asking questions",
   },
   {
     name: "license",

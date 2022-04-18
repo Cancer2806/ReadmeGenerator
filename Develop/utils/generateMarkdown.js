@@ -1,4 +1,4 @@
-// Create a function that returns a license badge based on which license is passed in
+// Function that returns the license badge for the selected license
 function renderLicenseBadge(license) {
   let badgeURL = '';
   switch (license) {
@@ -41,7 +41,7 @@ function renderLicenseBadge(license) {
   return badgeURL;
 }
 
-// TODO: Create a function that returns the license link
+// Function that returns the license link
 function renderLicenseLink(license) {
   let licenseURL = '';
   switch (license) {
@@ -84,65 +84,60 @@ function renderLicenseLink(license) {
   return licenseURL;
 }
 
+// function to generate the Table of Contents
+function renderTableContents(data) {
+  let tableContents = '';
+  if (data.installation) { tableContents = `- [Installation](#installation-notes)\n` };
+  if (data.usage) { tableContents = tableContents + `- [Usage](#usage)\n` };
+  if (data.features) { tableContents = tableContents + `- [Features](#Features)\n` };
+  if (data.credits) { tableContents = tableContents + `- [Credits](#credits)\n` };
+  if (data.contributing) { tableContents = tableContents + `- [Contributing](#Contributing)\n` };
+  if (data.tests) { tableContents = tableContents + `- [Tests](#Tests)\n` };
+  tableContents = tableContents + `- [Questions](#Questions)\n`;
+  tableContents = tableContents + `- [License](#license)\n`;
+  
+  return tableContents;
+}
+
+// function to generate the Table of Contents
+function renderBodyContents(data) {
+  let bodyContents = '';
+  if (data.installation) { bodyContents = `## Installation Notes  \n\n  ${data.installation}  \n\n\n` };
+  if (data.usage) { bodyContents = bodyContents + `## Usage \n\n  ${data.usage}  \n\n\n` };
+  if (data.features) { bodyContents = bodyContents + `## Features  \n\n  ${data.features}  \n\n\n` };
+  if (data.credits) { bodyContents = bodyContents + `## Credit  \n\n  ${data.credits}  \n\n\n` };
+   if (data.contributing) { bodyContents = bodyContents + `## Contributing  \n\n  ${data.contributing}  \n\n\n` };
+  if (data.tests) { bodyContents = bodyContents + `## Contributing  \n\n  ${data.tests}  \n\n\n` };
+ 
+  return bodyContents;
+}
+
 // Function to generate markdown for README
 function generateMarkdown(data) {
   
-  return `# ${data.title}
+  return `# ${data.title}  
 
 ![License](${renderLicenseBadge(data.license)})
-
+  
 
 ## Description
 
 ${data.description}
 
-
+  
 ## Table of Contents
 
-- [Installation](#installation-notes)
-- [Usage](#usage)
-- [Credits](#credits)
-- [Features](#Features)
-- [Contributing](#Contributing)
-- [Tests](#Tests)
-- [Questions](#Questions)
-- [License](#license)
-
-{Delete those that don't apply for any particular application - don't forget to remove this part either :)}
-
-## Installation Notes
-
-${data.installation}
-
-## Usage
-
-${data.usage}
-
-## Credits
-
-${data.credits}
+${renderTableContents(data)}
 
 
-## Features
-
-${data.features}
-
-
-## Contributing
-
-If you would like to contribute, please follow these guidelines: ${data.contributing}
-
-
-## Tests
-
-${data.tests}
-
+${renderBodyContents(data)}
 ## Questions
+${data.questions}
 Github:  ${data.github}
 Email:  ${data.email}
 
-## License
 
+## License
 This project is licensed under ${renderLicenseLink(data.license)}.
 `;
 }

@@ -1,57 +1,55 @@
-# Whatttt
+# Readme Generator  
 
-![License](https://img.shields.io/badge/License-CC_BY--SA_4.0-lightgrey.svg)
-
+![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)
+  
 
 ## Description
 
-eats
+The app will generate a Readme template based on the answers to a series of questions
 
-
+  
 ## Table of Contents
 
 - [Installation](#installation-notes)
 - [Usage](#usage)
 - [Credits](#credits)
-- [Features](#Features)
-- [Contributing](#Contributing)
 - [Tests](#Tests)
 - [Questions](#Questions)
 - [License](#license)
 
-{Delete those that don't apply for any particular application - don't forget to remove this part either :)}
-
-## Installation Notes
-
-bacon 
-
-## Usage
-
-and 
-
-## Credits
-
-eggs
 
 
-## Features
+## Installation Notes  
 
-around
-
-
-## Contributing
-
-If you would like to contribute, please follow these guidelines: here
+  Fork from Github and retain the directory structure.  
 
 
-## Tests
+
+## Usage 
+
+  Ensure you are in the "Develop" directory and type node index.js in your terminal of choice.  Questions will be displayed in the terminal.  Answer the questions that are relevant to your project.  If a section is not relevant to your Project, then just press enter and move onto the next question. The Readme file will be generated in the parent directory (Readme Generator).  Finalise the editing and post to your Github.  
+
+
+
+## Credit  
+
+  So many wonderful people  
+
+
+
+## Contributing  
+
+  I would suggest not testing  
+
+
 
 
 
 ## Questions
-Github:  
-Email:  
+Contact me by email
+Github:  Cancer2806
+Email:  frank.lavery
+
 
 ## License
-
-This project is licensed under [CC Attribution 4.0](https://creativecommons.org/licenses/by/4.0/).
+This project is licensed under [Apache 2.0](https://opensource.org/licenses/Apache-2.0).
