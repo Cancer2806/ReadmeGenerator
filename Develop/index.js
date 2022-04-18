@@ -2,7 +2,7 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 const generateMarkdown = require('./utils/generateMarkdown.js');
-// const { dirname } = require('path');
+
 
 // Array of questions for user input
 const questions = [
@@ -27,14 +27,14 @@ const questions = [
     message: "Enter any notes on Usage of the Project",
   },
   {
-    name: "credits",
-    type: "input",
-    message: "Enter any Credits you'd like to acknowledge, such as Collaborators, Third party assets, etc.",
-  },
-  {
     name: "features",
     type: "input",
     message: "Enter details of any particular features you'd like to mention",
+  },
+  {
+    name: "credits",
+    type: "input",
+    message: "Enter any Credits you'd like to acknowledge, such as Collaborators, Third party assets, etc.",
   },
   {
     name: "contributing",
@@ -96,9 +96,10 @@ function init() {
   inquirer.prompt(questions)
     .then(function (responses) {
       writeToFile('readme.md', responses);
+      console.log("Successfully written to disk")
     })
     .catch((error) => {
-      console.log(error);
+      console.log(`Something went wrong.  This is the error message: ${error}`);
     })
 }
 

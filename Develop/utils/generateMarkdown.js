@@ -99,7 +99,7 @@ function renderTableContents(data) {
   return tableContents;
 }
 
-// function to generate the Table of Contents
+// function to generate body of the Readme
 function renderBodyContents(data) {
   let bodyContents = '';
   if (data.installation) { bodyContents = `## Installation Notes  \n\n  ${data.installation}  \n\n\n` };
@@ -107,12 +107,12 @@ function renderBodyContents(data) {
   if (data.features) { bodyContents = bodyContents + `## Features  \n\n  ${data.features}  \n\n\n` };
   if (data.credits) { bodyContents = bodyContents + `## Credit  \n\n  ${data.credits}  \n\n\n` };
    if (data.contributing) { bodyContents = bodyContents + `## Contributing  \n\n  ${data.contributing}  \n\n\n` };
-  if (data.tests) { bodyContents = bodyContents + `## Contributing  \n\n  ${data.tests}  \n\n\n` };
+  if (data.tests) { bodyContents = bodyContents + `## Contributing  \n\n  ${data.tests}  \n\n` };
  
   return bodyContents;
 }
 
-// Function to generate markdown for README
+// Function to generate the markdown for the README
 function generateMarkdown(data) {
   
   return `# ${data.title}  
@@ -133,7 +133,9 @@ ${renderTableContents(data)}
 ${renderBodyContents(data)}
 ## Questions
 ${data.questions}
+
 Github:  ${data.github}
+
 Email:  ${data.email}
 
 

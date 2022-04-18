@@ -1,19 +1,20 @@
 # Readme Generator  
 
-![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)
+![License](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)
   
 
 ## Description
 
-The app will generate a Readme template based on the answers to a series of questions
+The application produces a Readme template for a Github repository.  The Readme file of this repository was produced with this Readme generator.
 
   
 ## Table of Contents
 
 - [Installation](#installation-notes)
 - [Usage](#usage)
+- [Features](#Features)
 - [Credits](#credits)
-- [Tests](#Tests)
+- [Contributing](#Contributing)
 - [Questions](#Questions)
 - [License](#license)
 
@@ -21,35 +22,36 @@ The app will generate a Readme template based on the answers to a series of ques
 
 ## Installation Notes  
 
-  Fork from Github and retain the directory structure.  
-
+  Fork from Github and retain the directory structure.  Node must be installed on your computer.  
 
 
 ## Usage 
 
-  Ensure you are in the "Develop" directory and type node index.js in your terminal of choice.  Questions will be displayed in the terminal.  Answer the questions that are relevant to your project.  If a section is not relevant to your Project, then just press enter and move onto the next question. The Readme file will be generated in the parent directory (Readme Generator).  Finalise the editing and post to your Github.  
+  Ensure you are in the correct directory (Develop) and using your preferred terminal, type 'node index.js'.  You will be asked a series of questions specifically about the repository for which you are generating a Readme file.  If any section is not applicable to your project, then just press 'Enter' to move onto the next question. If no text is entered, the section will not be included in the Readme file (with the exception of Questions and Licenses which are always included).  Once all of the questions have been answered, the Readme file will be generated in the parent directory to 'Develop'.  Simply copy the Readme file to the appropriate repository folder and push to Github.  Feel free to make any final edits, such as the inclusion of screenshots, etc.  
 
+
+## Features  
+
+  Generation of the badges, and inclusion of only the sections relevant to your app are considered features  
 
 
 ## Credit  
 
-  So many wonderful people  
-
+  https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba was very useful for generating badges and links to license pages.  \n Shield IO was used for generating the badges.  https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide was used to provide the template for the Readme file.  
 
 
 ## Contributing  
 
-  I would suggest not testing  
-
-
-
+  The [Contributor Covenant](https://www.contributor-covenant.org/) should be followed for any contributions  
 
 
 ## Questions
-Contact me by email
-Github:  Cancer2806
-Email:  frank.lavery
+Any questions should be directed to my email
+
+Github:  https://github.com/Cancer2806
+
+Email:  frank.lavery@westnet.com.au
 
 
 ## License
-This project is licensed under [Apache 2.0](https://opensource.org/licenses/Apache-2.0).
+This project is licensed under [Mozilla Public License 2.0](https://opensource.org/licenses/MPL-2.0).
