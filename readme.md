@@ -1,11 +1,11 @@
-# Trial Version
+# Whatttt
 
-![License](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)
+![License](https://img.shields.io/badge/License-CC_BY--SA_4.0-lightgrey.svg)
 
 
 ## Description
 
-Generates a Readme Template
+eats
 
 
 ## Table of Contents
@@ -23,25 +23,25 @@ Generates a Readme Template
 
 ## Installation Notes
 
-Install Anywhere
+bacon 
 
 ## Usage
 
-Create Readme file and copy to your repository.  Complete as needed
+and 
 
 ## Credits
 
-Luka
+eggs
 
 
 ## Features
 
-
+around
 
 
 ## Contributing
 
-If you would like to contribute, please follow these guidelines: 
+If you would like to contribute, please follow these guidelines: here
 
 
 ## Tests
@@ -49,10 +49,9 @@ If you would like to contribute, please follow these guidelines:
 
 
 ## Questions
-Github:  Cancer2806
-Email:  frank.lavery@westnet.com.au
+Github:  
+Email:  
 
 ## License
 
-This project is licensed under https://opensource.org/licenses/MPL-2.0
-  And Done That.
+This project is licensed under [CC Attribution 4.0](https://creativecommons.org/licenses/by/4.0/).

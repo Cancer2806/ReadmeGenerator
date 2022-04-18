@@ -36,7 +36,7 @@ function renderLicenseBadge(license) {
       badgeURL = `https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg`;
       break;
     default:
-      badgeURL='No License'
+      badgeURL=' No License Selected'
   }
   return badgeURL;
 }
@@ -46,52 +46,42 @@ function renderLicenseLink(license) {
   let licenseURL = '';
   switch (license) {
     case 'Apache 2.0':
-      licenseURL = `https://opensource.org/licenses/Apache-2.0`;
+      licenseURL = `[${license}](https://opensource.org/licenses/Apache-2.0)`;
       break;
     case 'Boost 1.0':
-      licenseURL = `ttps://www.boost.org/LICENSE_1_0.txt`;
+      licenseURL = `[${ license }](https://www.boost.org/LICENSE_1_0.txt)`;
       break;
     case 'BSD 2 Clause':
-      licenseURL = `https://opensource.org/licenses/BSD-2-Clause`;
+      licenseURL = `[${license}](https://opensource.org/licenses/BSD-2-Clause)`;
       break;
     case 'BSD 3 Clause':
-      licenseURL = `https://opensource.org/licenses/BSD-3-Clause`;
+      licenseURL = `[${license}](https://opensource.org/licenses/BSD-3-Clause)`;
       break;
     case 'Creatvie Commons 1.0':
-      licenseURL = `http://creativecommons.org/publicdomain/zero/1.0/`;
+      licenseURL = `[${license}](http://creativecommons.org/publicdomain/zero/1.0/)`;
       break;
     case 'CC Attribution 4.0':
-      licenseURL = `https://creativecommons.org/licenses/by/4.0/`;
+      licenseURL = `[${license}](https://creativecommons.org/licenses/by/4.0/)`;
       break;
     case 'Eclipse Public License 1.0':
-      licenseURL = `https://opensource.org/licenses/EPL-1.0`;
+      licenseURL = `[${license}](https://opensource.org/licenses/EPL-1.0)`;
       break;
     case 'GNU v3':
-      licenseURL = `https://www.gnu.org/licenses/gpl-3.0`;
+      licenseURL = `[${license}](https://www.gnu.org/licenses/gpl-3.0)`;
       break;
     case 'GNU v2':
-      licenseURL = `https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html`;
+      licenseURL = `[${license}](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)`;
       break;
     case 'MIT':
-      licenseURL = `https://opensource.org/licenses/MIT`;
+      licenseURL = `[${license}](https://opensource.org/licenses/MIT)`;
       break;
     case 'Mozilla Public License 2.0':
-      licenseURL = `https://opensource.org/licenses/MPL-2.0`;
+      licenseURL = `[${license}](https://opensource.org/licenses/MPL-2.0)`;
       break;
     default:
-      licenseURL = 'No License'
+      licenseURL = ' No License selected'
   }
   return licenseURL;
-}
-
-// TODO: Create a function that returns the license section of README
-function renderLicenseSection(license) {
-  if (license && license !== 'No License') {
-    return `And Done That`
-  }
-  else {
-    return ''
-  }
 }
 
 // Function to generate markdown for README
@@ -153,8 +143,7 @@ Email:  ${data.email}
 
 ## License
 
-This project is licensed under ${renderLicenseLink(data.license)}
-  ${renderLicenseSection(data.license)}.
+This project is licensed under ${renderLicenseLink(data.license)}.
 `;
 }
 
