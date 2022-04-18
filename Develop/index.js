@@ -2,7 +2,7 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 const generateMarkdown = require('./utils/generateMarkdown.js');
-const { dirname } = require('path');
+// const { dirname } = require('path');
 
 // Array of questions for user input
 const questions = [
@@ -66,14 +66,13 @@ const questions = [
       "Boost 1.0",
       "BSD 2 Clause",
       "BSD 3 Clause",
-      "BSD 4 Clause",
-      "CCO",
-      "CCO 1.0",
-      "CC BY 4.0",
-      "EPL 1.0",
+      "Creatvie Commons 1.0",
+      "CC Attribution 4.0",
+      "Eclipse Public License 1.0",
       "GNU v3",
       "GNU v2",
       "MIT",
+      "Mozilla Public License 2.0"
     ],
   }
 ];
