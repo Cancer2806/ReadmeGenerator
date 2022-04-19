@@ -89,11 +89,11 @@ function renderTableContents(data) {
   let tableContents = '';
   if (data.installation) { tableContents = `- [Installation](#installation-notes)\n` };
   if (data.usage) { tableContents = tableContents + `- [Usage](#usage)\n` };
-  if (data.features) { tableContents = tableContents + `- [Features](#Features)\n` };
+  if (data.features) { tableContents = tableContents + `- [Features](#features)\n` };
   if (data.credits) { tableContents = tableContents + `- [Credits](#credits)\n` };
-  if (data.contributing) { tableContents = tableContents + `- [Contributing](#Contributing)\n` };
-  if (data.tests) { tableContents = tableContents + `- [Tests](#Tests)\n` };
-  tableContents = tableContents + `- [Questions](#Questions)\n`;
+  if (data.contributing) { tableContents = tableContents + `- [Contributing](#contributing)\n` };
+  if (data.tests) { tableContents = tableContents + `- [Tests](#tests)\n` };
+  tableContents = tableContents + `- [Questions](#questions)\n`;
   tableContents = tableContents + `- [License](#license)\n`;
   
   return tableContents;
@@ -102,12 +102,12 @@ function renderTableContents(data) {
 // function to generate body of the Readme
 function renderBodyContents(data) {
   let bodyContents = '';
-  if (data.installation) { bodyContents = `## Installation Notes  \n\n  ${data.installation}  \n\n\n` };
-  if (data.usage) { bodyContents = bodyContents + `## Usage \n\n  ${data.usage}  \n\n\n` };
-  if (data.features) { bodyContents = bodyContents + `## Features  \n\n  ${data.features}  \n\n\n` };
-  if (data.credits) { bodyContents = bodyContents + `## Credit  \n\n  ${data.credits}  \n\n\n` };
-   if (data.contributing) { bodyContents = bodyContents + `## Contributing  \n\n  ${data.contributing}  \n\n\n` };
-  if (data.tests) { bodyContents = bodyContents + `## Contributing  \n\n  ${data.tests}  \n\n` };
+  if (data.installation) { bodyContents = `## Installation Notes  \n\n  ${data.installation}   \n\n\n` };
+  if (data.usage) { bodyContents = bodyContents + `## Usage \n\n  ${data.usage}   \n\n\n` };
+  if (data.features) { bodyContents = bodyContents + `## Features  \n\n  ${data.features}   \n\n\n` };
+  if (data.credits) { bodyContents = bodyContents + `## Credit  \n\n  ${data.credits}   \n\n\n` };
+   if (data.contributing) { bodyContents = bodyContents + `## Contributing  \n\n  ${data.contributing}   \n\n\n` };
+  if (data.tests) { bodyContents = bodyContents + `## Testing  \n\n  ${data.tests}   \n\n` };
  
   return bodyContents;
 }
@@ -131,6 +131,7 @@ ${renderTableContents(data)}
 
 
 ${renderBodyContents(data)}
+
 ## Questions
 ${data.questions}
 
