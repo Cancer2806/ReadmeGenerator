@@ -38,7 +38,9 @@ The application produces a Readme template for a Github repository.   The Readme
 
 ## Credits  
 
-  https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba was very useful for generating badges and links to license pages.   Shield IO was used for generating the badges.   https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide was used to provide the template for the Readme file.
+  https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba was very useful for generating badges and links to license pages.   
+  Shield IO was used for generating the badges.   
+  https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide was used to provide the template for the Readme file.
 
 
 ## Contributing  
