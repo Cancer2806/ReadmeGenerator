@@ -92,7 +92,7 @@ function renderTableContents(data) {
   if (data.features) { tableContents = tableContents + `- [Features](#features)\n` };
   if (data.credits) { tableContents = tableContents + `- [Credits](#credits)\n` };
   if (data.contributing) { tableContents = tableContents + `- [Contributing](#contributing)\n` };
-  if (data.tests) { tableContents = tableContents + `- [Tests](#tests)\n` };
+  if (data.tests) { tableContents = tableContents + `- [Testing](#testing)\n` };
   tableContents = tableContents + `- [Questions](#questions)\n`;
   tableContents = tableContents + `- [License](#license)\n`;
   
@@ -105,7 +105,7 @@ function renderBodyContents(data) {
   if (data.installation) { bodyContents = `## Installation Notes  \n\n  ${data.installation}   \n\n\n` };
   if (data.usage) { bodyContents = bodyContents + `## Usage \n\n  ${data.usage}   \n\n\n` };
   if (data.features) { bodyContents = bodyContents + `## Features  \n\n  ${data.features}   \n\n\n` };
-  if (data.credits) { bodyContents = bodyContents + `## Credit  \n\n  ${data.credits}   \n\n\n` };
+  if (data.credits) { bodyContents = bodyContents + `## Credits  \n\n  ${data.credits}   \n\n\n` };
    if (data.contributing) { bodyContents = bodyContents + `## Contributing  \n\n  ${data.contributing}   \n\n\n` };
   if (data.tests) { bodyContents = bodyContents + `## Testing  \n\n  ${data.tests}   \n\n` };
  
