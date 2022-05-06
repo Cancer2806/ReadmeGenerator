@@ -84,18 +84,19 @@ const questions = [
 
 // Function to write README file
 function writeToFile(fileName, data) {
+  console.log(`file path ${fileName}`);
   const fileContent = generateMarkdown.generateMarkdown(data);
-  if (fs.existsSync(`../${fileName}`)) {
-    fs.unlinkSync(`../${fileName}`)
+  if (fs.existsSync(`${fileName}`)) {
+    fs.unlinkSync(`${fileName}`)
   }
-  fs.writeFileSync(`../${fileName}`, fileContent, 'utf8');
+  fs.writeFileSync(`${fileName}`, fileContent, 'utf8');
 }
 
 // Function to initialize app
 function init() {
   inquirer.prompt(questions)
     .then(function (responses) {
-      writeToFile('readme.md', responses);
+      writeToFile('newfilefolder/readme.md', responses);
       console.log("Successfully written to disk")
     })
     .catch((error) => {
